@@ -1,1 +1,24 @@
 <p>menu works!</p>
+<div class="main">
+  <div class="total">
+    <p>Выбрано пунктов: {{selectedItems}}</p>
+    <p>Общее значение: {{sumCount}}</p>
+  </div>
+
+  <div class="page">
+    <div class="leftPage">
+      <p>name</p>
+    </div>
+    <div class="list">
+      <ul>
+        <li *ngFor="let item of items">
+          <label>
+            <input type="checkbox" [(ngModel)]="item.selected">
+            {{item.name}} {{item.value}}
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
