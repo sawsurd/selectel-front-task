@@ -5,12 +5,35 @@
   justify-content: center;
 }
 
+.header {
+  border: black solid 1px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .total {
   display: flex;
   justify-content: end;
   flex-direction: row;
   gap: 1rem;
-  margin: 0 1rem;
+}
+
+.menusList {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menusList:hover {
+  background: rgba(135, 135, 135, 0.42);
+  color: #5c0101;
+}
+
+.menusList.active {
+  font-weight: 600;
+  border-left: 4px solid #db3461;
 }
 
 .page {
@@ -21,13 +44,12 @@
 .leftPage {
   padding: 2rem;
   border: black solid 1px;
-
 }
 
 .list {
   padding: 2rem;
   border: black solid 1px;
-
+  background-color: #b8b8b8;
 }
 
 ul { list-style: none; padding: 0; }

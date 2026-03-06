@@ -1,22 +1,32 @@
-<p>menu works!</p>
 <div class="main">
-  <div class="total">
-    <p>Выбрано пунктов: {{selectedItems}}</p>
-    <p>Общее значение: {{sumCount}}</p>
+  <div class="header">
+    <h3>Раздел: {{currentMenu?.name}}</h3>
+    <div class="total">
+      <p>Выбрано пунктов: {{selectedItems}}</p>
+      <p>Общее значение: {{sumCount}}</p>
+    </div>
   </div>
-
   <div class="page">
     <div class="leftPage">
-      <p>name</p>
+      <ul>
+        @for (menu of menus; track menu.name) {
+          <li class="menusList" [class.active]="currentMenu === menu"
+              (click)="selectMenu(menu)">
+            {{ menu.name }}
+          </li>
+        }
+      </ul>
     </div>
     <div class="list">
       <ul>
-        <li *ngFor="let item of items">
-          <label>
-            <input type="checkbox" [(ngModel)]="item.selected">
-            {{item.name}} {{item.value}}
-          </label>
-        </li>
+        @for (item of items; track item.name) {
+          <li>
+            <label>
+              <input type="checkbox" [(ngModel)]="item.selected">
+              {{ item.name }} {{ item.value }}
+            </label>
+          </li>
+        }
       </ul>
     </div>
   </div>
