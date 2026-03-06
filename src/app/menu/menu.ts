@@ -28,7 +28,9 @@ export class MenuComponent {
         { name: 'Item1', value: 500, selected: false },
         { name: 'Item2', value: 600, selected: false },
         { name: 'Item3', value: 700, selected: false },
-        { name: 'Item4', value: 550, selected: false }
+        { name: 'Item4', value: 550, selected: false },
+        { name: 'Item5', value: 600, selected: false },
+        { name: 'Item6', value: 600, selected: false },
       ]
     },
     {
